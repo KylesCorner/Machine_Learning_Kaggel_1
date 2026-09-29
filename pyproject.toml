@@ -7,12 +7,14 @@ requires-python = ">=3.11"
 
 dependencies = [
     "catboost>=1.2.8",
+    "kaggle",
     "numpy>=2.0",
     "pandas>=2.2",
     "scikit-learn>=1.5",
 ]
 
 [project.scripts]
+mushroom-download = "mushroom_model.download:main"
 mushroom-train = "mushroom_model.train:main"
 
 [build-system]
