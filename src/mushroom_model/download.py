@@ -5,6 +5,7 @@ import shutil
 import subprocess
 
 from mushroom_model.config import DATA_DIR
+from dotenv import load_dotenv
 
 
 COMPETITION = "playground-series-s4e8"
@@ -126,6 +127,7 @@ def download_dataset(force: bool = False) -> None:
 
 
 def main() -> None:
+    load_dotenv()
     args = parse_args()
 
     download_dataset(
